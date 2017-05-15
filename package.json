@@ -1,15 +1,15 @@
 {
-  "name": "winterdawn-syntax",
-  "theme": "syntax",
-  "version": "0.1.0",
-  "description": "An light syntax theme for Atom using a subtle colour palette.",
-  "keywords": [
-    "syntax",
-    "theme"
-  ],
-  "repository": "https://github.com/awtwhite/atom-winterdawn-syntax",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  }
+    "name": "winterdawn-syntax",
+    "theme": "syntax",
+    "version": "0.2.0",
+    "description": "An light syntax theme for Atom using a subtle colour palette.",
+    "keywords": [
+        "syntax",
+        "theme"
+    ],
+    "repository": "https://github.com/awtwhite/atom-winterdawn-syntax",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    }
 }
