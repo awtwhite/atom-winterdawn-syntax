@@ -60,14 +60,14 @@ atom-text-editor {
 }
 
 
-.search-results .marker .region,
-atom-text-editor .search-results .marker .region {
+.search-results .syntax--marker .region,
+atom-text-editor .search-results .syntax--marker .region {
     background-color: transparent;
     border: 1px solid @syntax-result-marker-color;
 }
 
-.search-results .marker.current-result .region,
-atom-text-editor .search-results .marker.current-result .region {
+.search-results .syntax--marker.current-result .region,
+atom-text-editor .search-results .syntax--marker.current-result .region {
     border: 1px solid @syntax-result-marker-color-selected;
 }
 
@@ -82,31 +82,31 @@ atom-text-editor .search-results .marker.current-result .region {
 .syntax--keyword {
     color: @gold;
 
-    &.control {
+    &.syntax--control {
         color: @rose;
     }
 
-    &.operator {
+    &.syntax--operator {
         color: @dark-gray;
     }
 
-    &.operator.logical {
+    &.syntax--operator.syntax--logical {
         color: @darker-gray;
     }
 
-    &.operator.ternary {
+    &.syntax--operator.syntax--ternary {
         color: @blue;
     }
 
-    &.assignment {
+    &.syntax--assignment {
         color: @dark-gray;
     }
 
-    &.other.special-method {
+    &.syntax--other.syntax--special-method {
         // color: @cyan;
     }
 
-    &.other.unit {
+    &.syntax--other.syntax--unit {
         // color: @rose;
     }
 }
@@ -116,7 +116,7 @@ atom-text-editor .search-results .marker.current-result .region {
 .syntax--storage {
     color: @cyan;
 
-    &.type.function {
+    &.syntax--type.syntax--function {
         color: saturate(@blue, 10%);
     }
 }
@@ -126,40 +126,40 @@ atom-text-editor .search-results .marker.current-result .region {
 .syntax--entity {
     color: @violet;
 
-    // &.name.function {
+    // &.syntax--name.syntax--function {
     //     color: @cyan;
     // }
     //
-    // &.name.type {
+    // &.syntax--name.syntax--type {
     //     color: @gold;
     //     text-decoration: underline;
     // }
     //
-    // &.other.inherited-class {
+    // &.syntax--other.syntax--inherited-class {
     //     color: @mint;
     // }
 
-    &.name.class,
-    &.name.type.class {
+    &.syntax--name.syntax--class,
+    &.syntax--name.syntax--type.syntax--class {
         color: darken(@violet, 15%);
     }
 
-    // &.name.section {
+    // &.syntax--name.syntax--section {
     //     color: @cyan;
     // }
 
-    .tag {
+    .syntax--tag {
         color: lime;
     }
 
-    &.name.tag {
+    &.syntax--name.syntax--tag {
         color: @rose;
     }
 
-    // &.other.attribute-name {
+    // &.syntax--other.syntax--attribute-name {
     //     color: @cyan;
     //
-    //     &.id {
+    //     &.syntax--id {
     //         color: darken(@cyan, 10%);
     //     }
     // }
@@ -167,15 +167,15 @@ atom-text-editor .search-results .marker.current-result .region {
 
 
 
-// keep above .constant
+//IMPORTANT keep above .syntax--constant
 .syntax--variable {
     color: @violet;
 
-    &.interpolation {
-        // color: @rose;
-    }
+    // &.syntax--interpolation {
+    //     color: @rose;
+    // }
 
-    &.parameter.function {
+    &.syntax--parameter.syntax--function {
         color: @dark-gray;
     }
 }
@@ -185,19 +185,19 @@ atom-text-editor .search-results .marker.current-result .region {
 .syntax--constant {
     color: darken(@violet, 15%);
 
-    &.numeric {
+    &.syntax--numeric {
         color: @cyan;
     }
 
-    &.character.escape {
+    &.syntax--character.syntax--escape {
         // color: @cyan;
     }
 
-    &.other.color {
+    &.syntax--other.syntax--color {
         // color: @cyan;
     }
 
-    &.other.symbol {
+    &.syntax--other.syntax--symbol {
         // color: @mint;
     }
 }
@@ -213,7 +213,7 @@ atom-text-editor .search-results .marker.current-result .region {
 .syntax--string {
     color: darken(@peach, 8%);
 
-    &.other.link {
+    &.syntax--other.syntax--link {
         color: @red;
     }
 }
@@ -224,27 +224,27 @@ atom-text-editor .search-results .marker.current-result .region {
     color: @darker-gray;
     background-color: #eee;
 
-    .regexp {
-        background-color: transparent; // reset background color on nested .regexp classes
+    .syntax--regexp {
+        background-color: transparent; // reset background color on nested .syntax--regexp classes
     }
 
-    .begin {
+    .syntax--begin {
         color: @light-gray;
     }
 
-    .end {
+    .syntax--end {
         color: @light-gray;
     }
 
-    .group {
+    .syntax--group {
         background-color: #e7fef2;
     }
 
-    .set {
+    .syntax--set {
         background-color: #fffddf;
     }
 
-    .keyword.other {
+    .syntax--keyword.syntax--other {
         color: @light-gray;
     }
 }
@@ -252,35 +252,35 @@ atom-text-editor .search-results .marker.current-result .region {
 
 
 // .syntax--punctuation {
-//     &.definition {
-//         &.comment {
+//     &.syntax--definition {
+//         &.syntax--comment {
 //             color: @light-gray;
 //         }
 //
-//         &.array,
-//         &.parameters,
-//         &.string,
-//         &.variable {
+//         &.syntax--array,
+//         &.syntax--parameters,
+//         &.syntax--string,
+//         &.syntax--variable {
 //             color: @dark-gray;
 //         }
 //
-//         &.heading,
-//         &.identity {
+//         &.syntax--heading,
+//         &.syntax--identity {
 //             color: @cyan;
 //         }
 //
-//         &.bold {
+//         &.syntax--bold {
 //             color: @gold;
 //             font-weight: bold;
 //         }
 //
-//         &.italic {
+//         &.syntax--italic {
 //             color: @cyan;
 //             font-style: italic;
 //         }
 //     }
 //
-//     &.section.embedded {
+//     &.syntax--section.syntax--embedded {
 //         color: @red;
 //     }
 //
@@ -289,14 +289,14 @@ atom-text-editor .search-results .marker.current-result .region {
 
 
 // .syntax--support {
-//     &.class {
+//     &.syntax--class {
 //         color: @gold;
 //     }
 //
-//     &.function {
+//     &.syntax--function {
 //         color: @cyan;
 //
-//         &.any-method {
+//         &.syntax--any-method {
 //             color: @cyan;
 //         }
 //     }
@@ -304,23 +304,23 @@ atom-text-editor .search-results .marker.current-result .region {
 
 
 // .syntax--meta {
-//     &.class {
+//     &.syntax--class {
 //         color: @gold;
 //     }
 //
-//     &.link {
+//     &.syntax--link {
 //         color: @salmon;
 //     }
 //
-//     &.require {
+//     &.syntax--require {
 //         color: @cyan;
 //     }
 //
-//     &.selector {
+//     &.syntax--selector {
 //         color: @cyan;
 //     }
 //
-//     &.separator {
+//     &.syntax--separator {
 //         background-color: @gray;
 //         color: @dark-gray;
 //     }
@@ -331,47 +331,47 @@ atom-text-editor .search-results .marker.current-result .region {
 // }
 
 // .syntax--markup {
-//     &.bold {
+//     &.syntax--bold {
 //         color: @salmon;
 //         font-weight: bold;
 //     }
 //
-//     &.changed {
+//     &.syntax--changed {
 //         color: @cyan;
 //     }
 //
-//     &.deleted {
+//     &.syntax--deleted {
 //         color: @red;
 //     }
 //
-//     &.italic {
+//     &.syntax--italic {
 //         color: @cyan;
 //         font-style: italic;
 //     }
 //
-//     &.heading .punctuation.definition.heading {
+//     &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
 //         color: @cyan;
 //     }
 //
-//     &.inserted {
+//     &.syntax--inserted {
 //         color: @mint;
 //     }
 //
-//     &.list {
+//     &.syntax--list {
 //         color: @red;
 //     }
 //
-//     &.quote {
+//     &.syntax--quote {
 //         color: @salmon;
 //     }
 //
-//     &.raw.inline {
+//     &.syntax--raw.syntax--inline {
 //         color: @mint;
 //     }
 // }
 
 
-.source.gfm .markup {
+.syntax--source.syntax--gfm .syntax--markup {
     -webkit-font-smoothing: auto;
 
 //     &.heading {
@@ -387,35 +387,35 @@ atom-text-editor[mini] .scroll-view {
 
 .syntax--html {
 
-    .tag.html {
+    .syntax--tag.syntax--html {
         color: @gray;
 
-        &.begin,
-        &.end {
+        &.syntax--begin,
+        &.syntax--end {
             color: @rose;
         }
     }
 
-    .entity {
+    .syntax--entity {
 
-        &.name.tag {
+        &.syntax--name.syntax--tag {
             color: @rose;
         }
 
-        &.attribute-name {
+        &.syntax--attribute-name {
             color: @peach;
 
-            &.id {
+            &.syntax--id {
                 color: darken(@peach, 10%);
             }
         }
     }
 
-    .string {
+    .syntax--string {
         color: @violet;
 
-        &.begin,
-        &.end {
+        &.syntax--begin,
+        &.syntax--end {
             color: @gray;
         }
     }
@@ -424,53 +424,53 @@ atom-text-editor[mini] .scroll-view {
 
 .syntax--css {
 
-    &.key-value {
+    &.syntax--key-value {
         color: @gray;
     }
 
-    .string {
+    .syntax--string {
         color: @violet;
 
-        &.begin,
-        &.end {
+        &.syntax--begin,
+        &.syntax--end {
             color: @gray;
         }
     }
 
-    .keyword {
-        &.unit {
+    .syntax--keyword {
+        &.syntax--unit {
         color: desaturate(@peach, 40%);
         }
     }
 
-    .entity {
+    .syntax--entity {
 
-        &.begin,
-        &.end {
+        &.syntax--begin,
+        &.syntax--end {
             color: @gray;
         }
 
-        &.other.attribute-name {
+        &.syntax--other.syntax--attribute-name {
             color: @violet;
 
-            &.id {
+            &.syntax--id {
                 color: darken(@violet, 10%);
             }
 
-            &.mixin {
+            &.syntax--mixin {
                 color: lighten(@violet, 10%);
             }
 
-            &.attribute {
+            &.syntax--attribute {
                 color: @peach;
             }
         }
     }
 
-    .constant {
+    .syntax--constant {
         color: @peach;
 
-        &.property-value {
+        &.syntax--property-value {
             color: @rose;
         }
     }
@@ -480,16 +480,16 @@ atom-text-editor[mini] .scroll-view {
 
 .syntax--less,
 .syntax--scss {
-    &.variable {
+    &.syntax--variable {
         color: @cyan;
     }
 
-    &.at-rule,
-    &.at-rule .keyword {
+    &.syntax--at-rule,
+    &.syntax--at-rule .syntax--keyword {
         color: @mint;
     }
 
-    &.function {
+    &.syntax--function {
         color: @violet;
     }
 }
@@ -497,24 +497,24 @@ atom-text-editor[mini] .scroll-view {
 
 .syntax--json {
 
-    .string {
+    .syntax--string {
         color: @mint;
 
-        &.begin,
-        &.end {
+        &.syntax--begin,
+        &.syntax--end {
             color: @gray;
         }
     }
 
-    &.value {
+    &.syntax--value {
         color: @dark-gray;
 
-        > .string { // ">" to correct inheritance
+        > .syntax--string { // ">" to correct inheritance
             color: inherit;
         }
     }
 
-    &.separator {
+    &.syntax--separator {
         color: @gray;
     }
 
